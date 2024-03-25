@@ -24,10 +24,13 @@ import TodoButton from '@/components/TodoButton.vue'
 </script>
 
 <template>
-  <div class="border border-green-600" :class="{'border-red-500' : todoState.invalid}">
+  <div 
+    class="border border-green-600 w-full sm:w-96 flex" 
+    :class="{'border-red-500' : todoState.invalid}"
+    >
     <input 
       type="text" 
-      class="outline-none rounded-s-sm px-2 py-1 h-10 w-96" 
+      class="outline-none rounded-s-sm px-2 py-1 h-10 w-full" 
       v-model="todoState.todo" 
     />
     <TodoButton @click="createTodo()" />
